@@ -164,9 +164,8 @@ body {
 }
 
 .service .box-service {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  gap: 50px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -212,8 +211,9 @@ body {
 
 .service .box-service .box:nth-child(2) {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(2, 307px);
+  row-gap: 24px;
+  justify-content: center;
 }
 
 .service .box-service .box:nth-child(2) .box-card .fa-solid,
@@ -272,8 +272,7 @@ body {
 
 .paket .box-paket .box-card {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  column-gap: 25px;
 }
 
 .paket .box-paket .box-card .box {
@@ -670,9 +669,23 @@ body {
     width: 100%;
   }
 
+  .service .box-service {
+    flex-wrap: wrap;
+    row-gap: 50px;
+    justify-content: center;
+  }
+
   .service .box-service .box:nth-child(1) h1 {
     text-align: center;
     margin-bottom: 20px;
+  }
+
+  .service .box-service .box:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+    justify-content: center;
+    text-align: center;
   }
 
   .service .box-service .box:nth-child(1) .video-play {
@@ -689,7 +702,6 @@ body {
   }
 
   .paket .box-paket .box-card {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 54px;
